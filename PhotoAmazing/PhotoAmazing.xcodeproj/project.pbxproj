@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1640070E1D90DAC1000BBE24 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640070D1D90DAC1000BBE24 /* GalleryViewController.swift */; };
+		164007101D90DFD6000BBE24 /* bt_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1640070F1D90DFD6000BBE24 /* bt_back.png */; };
+		164007121D90DFEF000BBE24 /* bt_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 164007111D90DFEF000BBE24 /* bt_menu.png */; };
+		164007141D910765000BBE24 /* PhotoAmazingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164007131D910765000BBE24 /* PhotoAmazingViewController.swift */; };
+		164007161D9107C8000BBE24 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 164007151D9107C8000BBE24 /* fish.png */; };
+		164007181D910AD3000BBE24 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164007171D910AD3000BBE24 /* Photos.framework */; };
+		1640071A1D9115DB000BBE24 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 164007191D9115DB000BBE24 /* bubble.png */; };
 		CA0762F71D902C1200033409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0762F61D902C1200033409 /* LoginViewController.swift */; };
 		CA23DF941D8EB7B900CA9DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA23DF931D8EB7B900CA9DB2 /* AppDelegate.swift */; };
 		CA23DF991D8EB7B900CA9DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA23DF971D8EB7B900CA9DB2 /* Main.storyboard */; };
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		024DFDEAF727D335BF6939BA /* Pods-PhotoAmazing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAmazing.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing.release.xcconfig"; sourceTree = "<group>"; };
 		07E6E6492D0089A41916556A /* Pods-PhotoAmazing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAmazing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing.debug.xcconfig"; sourceTree = "<group>"; };
+		1640070D1D90DAC1000BBE24 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		1640070F1D90DFD6000BBE24 /* bt_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_back.png; sourceTree = "<group>"; };
+		164007111D90DFEF000BBE24 /* bt_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_menu.png; sourceTree = "<group>"; };
+		164007131D910765000BBE24 /* PhotoAmazingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAmazingViewController.swift; sourceTree = "<group>"; };
+		164007151D9107C8000BBE24 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		164007171D910AD3000BBE24 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		164007191D9115DB000BBE24 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		99E9527CE897F28F8E88E02A /* Pods_PhotoAmazing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoAmazing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0762F61D902C1200033409 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA23DF901D8EB7B900CA9DB2 /* PhotoAmazing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAmazing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164007181D910AD3000BBE24 /* Photos.framework in Frameworks */,
 				CB4A575B9B768FA4009E2858 /* Pods_PhotoAmazing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +117,8 @@
 			children = (
 				CA23DFA81D8EB7E300CA9DB2 /* MainViewController.swift */,
 				CA0762F61D902C1200033409 /* LoginViewController.swift */,
+				1640070D1D90DAC1000BBE24 /* GalleryViewController.swift */,
+				164007131D910765000BBE24 /* PhotoAmazingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -123,6 +140,10 @@
 		CA23DFAA1D8ECB8B00CA9DB2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				164007191D9115DB000BBE24 /* bubble.png */,
+				164007151D9107C8000BBE24 /* fish.png */,
+				164007111D90DFEF000BBE24 /* bt_menu.png */,
+				1640070F1D90DFD6000BBE24 /* bt_back.png */,
 				CA23DFB51D8ED5BC00CA9DB2 /* ic_lock.png */,
 				CA23DFB61D8ED5BC00CA9DB2 /* ic_user.png */,
 				CA23DFB31D8ED1DB00CA9DB2 /* signinFb.png */,
@@ -136,6 +157,7 @@
 		E73BD937C7CF13AD4E215F75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				164007171D910AD3000BBE24 /* Photos.framework */,
 				99E9527CE897F28F8E88E02A /* Pods_PhotoAmazing.framework */,
 			);
 			name = Frameworks;
@@ -176,6 +198,7 @@
 				TargetAttributes = {
 					CA23DF8F1D8EB7B900CA9DB2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = USQFGC88U6;
 					};
 				};
 			};
@@ -204,8 +227,12 @@
 			files = (
 				CA23DFB41D8ED1DB00CA9DB2 /* signinFb.png in Resources */,
 				CA23DF9E1D8EB7B900CA9DB2 /* LaunchScreen.storyboard in Resources */,
+				1640071A1D9115DB000BBE24 /* bubble.png in Resources */,
+				164007121D90DFEF000BBE24 /* bt_menu.png in Resources */,
 				CA23DFB71D8ED5BC00CA9DB2 /* ic_lock.png in Resources */,
 				CA23DFB81D8ED5BC00CA9DB2 /* ic_user.png in Resources */,
+				164007161D9107C8000BBE24 /* fish.png in Resources */,
+				164007101D90DFD6000BBE24 /* bt_back.png in Resources */,
 				CA23DFB11D8ECF8A00CA9DB2 /* signin.png in Resources */,
 				CA23DFAD1D8ECB8B00CA9DB2 /* bubble.jpg in Resources */,
 				CA23DF9B1D8EB7B900CA9DB2 /* Assets.xcassets in Resources */,
@@ -270,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0762F71D902C1200033409 /* LoginViewController.swift in Sources */,
+				164007141D910765000BBE24 /* PhotoAmazingViewController.swift in Sources */,
+				1640070E1D90DAC1000BBE24 /* GalleryViewController.swift in Sources */,
 				CA23DF941D8EB7B900CA9DB2 /* AppDelegate.swift in Sources */,
 				CA23DFA91D8EB7E300CA9DB2 /* MainViewController.swift in Sources */,
 			);
@@ -387,6 +416,7 @@
 			baseConfigurationReference = 07E6E6492D0089A41916556A /* Pods-PhotoAmazing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhotoAmazing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dreamup.PhotoAmazing;
@@ -399,6 +429,7 @@
 			baseConfigurationReference = 024DFDEAF727D335BF6939BA /* Pods-PhotoAmazing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhotoAmazing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dreamup.PhotoAmazing;

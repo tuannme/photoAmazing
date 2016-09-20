@@ -29,14 +29,12 @@ class LoginViewController: UIViewController {
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(self.signupAction))
         signupLb.userInteractionEnabled = true
         signupLb.addGestureRecognizer(tapGesture)
-        
-        
+ 
     }
     
     func signupAction() {
         
     }
-    
     
     @IBAction func facebookAction(sender: AnyObject) {
         

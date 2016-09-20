@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FT4-Kc-ybR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FT4-Kc-ybR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -221,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="141" y="331"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Photo Amazing View Controller-->
         <scene sceneID="6Xx-Ag-kzg">
             <objects>
-                <viewController id="n7d-HH-Vzg" customClass="MainViewController" customModule="PhotoAmazing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n7d-HH-Vzg" customClass="PhotoAmazingViewController" customModule="PhotoAmazing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V48-CP-Tx7"/>
                         <viewControllerLayoutGuide type="bottom" id="FGh-m5-spG"/>
@@ -232,13 +232,70 @@
                     <view key="view" contentMode="scaleToFill" id="sgW-b9-IGw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVC-Nj-UPR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-Yf-Bvk">
+                                        <rect key="frame" x="0.0" y="20" width="80" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Mpw-CA-i7f"/>
+                                            <constraint firstAttribute="width" constant="80" id="orH-l8-8in"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="15" minY="10" maxX="55" maxY="10"/>
+                                        <state key="normal" image="bt_back.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITA-7t-yoX">
+                                        <rect key="frame" x="240" y="20" width="80" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Pc5-Mb-vJD"/>
+                                            <constraint firstAttribute="width" constant="80" id="fkC-eQ-vmf"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="37" minY="12" maxX="17" maxY="12"/>
+                                        <state key="normal" image="bt_menu.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1061451514" green="0.2901960784" blue="0.020627958299999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ha6-Yf-Bvk" secondAttribute="bottom" id="A9d-PH-Ml8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ITA-7t-yoX" secondAttribute="trailing" id="X1B-8i-EXu"/>
+                                    <constraint firstItem="Ha6-Yf-Bvk" firstAttribute="leading" secondItem="wVC-Nj-UPR" secondAttribute="leading" id="Xbp-Uh-EkZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ITA-7t-yoX" secondAttribute="bottom" id="oKR-sX-zmn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wVC-Nj-UPR" secondAttribute="trailing" id="68X-rI-jtA"/>
+                            <constraint firstItem="wVC-Nj-UPR" firstAttribute="leading" secondItem="sgW-b9-IGw" secondAttribute="leading" id="ICb-SY-glc"/>
+                            <constraint firstItem="wVC-Nj-UPR" firstAttribute="height" secondItem="sgW-b9-IGw" secondAttribute="height" multiplier="60:568" id="bOD-8d-dFV"/>
+                            <constraint firstItem="wVC-Nj-UPR" firstAttribute="top" secondItem="sgW-b9-IGw" secondAttribute="top" id="oD7-DA-s1B"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fit-I2-02E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="319"/>
+            <point key="canvasLocation" x="565" y="331"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="rNH-no-3Aw">
+            <objects>
+                <viewController id="tQK-5l-WB9" customClass="GalleryViewController" customModule="PhotoAmazing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yuf-bu-nVb"/>
+                        <viewControllerLayoutGuide type="bottom" id="FJ1-6D-qgx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cwd-TA-s99">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aoS-Pl-mYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="1011"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dSu-vU-1EY">
@@ -262,12 +319,14 @@
     </scenes>
     <resources>
         <image name="Nature.jpg" width="1080" height="1920"/>
+        <image name="bt_back.png" width="24" height="44"/>
+        <image name="bt_menu.png" width="40" height="32"/>
         <image name="ic_lock.png" width="128" height="128"/>
         <image name="ic_user.png" width="128" height="128"/>
         <image name="signin.png" width="521" height="92"/>
         <image name="signinFb.png" width="521" height="91"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gwv-jy-0Bc"/>
+        <segue reference="nnb-rb-ra0"/>
     </inferredMetricsTieBreakers>
 </document>
