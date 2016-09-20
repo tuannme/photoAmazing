@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA0762F71D902C1200033409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0762F61D902C1200033409 /* LoginViewController.swift */; };
+		CA23DF941D8EB7B900CA9DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA23DF931D8EB7B900CA9DB2 /* AppDelegate.swift */; };
+		CA23DF991D8EB7B900CA9DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA23DF971D8EB7B900CA9DB2 /* Main.storyboard */; };
+		CA23DF9B1D8EB7B900CA9DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA23DF9A1D8EB7B900CA9DB2 /* Assets.xcassets */; };
+		CA23DF9E1D8EB7B900CA9DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA23DF9C1D8EB7B900CA9DB2 /* LaunchScreen.storyboard */; };
+		CA23DFA91D8EB7E300CA9DB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA23DFA81D8EB7E300CA9DB2 /* MainViewController.swift */; };
+		CA23DFAD1D8ECB8B00CA9DB2 /* bubble.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA23DFAB1D8ECB8B00CA9DB2 /* bubble.jpg */; };
+		CA23DFAE1D8ECB8B00CA9DB2 /* Nature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA23DFAC1D8ECB8B00CA9DB2 /* Nature.jpg */; };
+		CA23DFB11D8ECF8A00CA9DB2 /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = CA23DFAF1D8ECF8A00CA9DB2 /* signin.png */; };
+		CA23DFB41D8ED1DB00CA9DB2 /* signinFb.png in Resources */ = {isa = PBXBuildFile; fileRef = CA23DFB31D8ED1DB00CA9DB2 /* signinFb.png */; };
+		CA23DFB71D8ED5BC00CA9DB2 /* ic_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = CA23DFB51D8ED5BC00CA9DB2 /* ic_lock.png */; };
+		CA23DFB81D8ED5BC00CA9DB2 /* ic_user.png in Resources */ = {isa = PBXBuildFile; fileRef = CA23DFB61D8ED5BC00CA9DB2 /* ic_user.png */; };
+		CB4A575B9B768FA4009E2858 /* Pods_PhotoAmazing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E9527CE897F28F8E88E02A /* Pods_PhotoAmazing.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		024DFDEAF727D335BF6939BA /* Pods-PhotoAmazing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAmazing.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing.release.xcconfig"; sourceTree = "<group>"; };
+		07E6E6492D0089A41916556A /* Pods-PhotoAmazing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAmazing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing.debug.xcconfig"; sourceTree = "<group>"; };
+		99E9527CE897F28F8E88E02A /* Pods_PhotoAmazing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoAmazing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0762F61D902C1200033409 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CA23DF901D8EB7B900CA9DB2 /* PhotoAmazing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAmazing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA23DF931D8EB7B900CA9DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA23DF981D8EB7B900CA9DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA23DF9A1D8EB7B900CA9DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA23DF9D1D8EB7B900CA9DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA23DF9F1D8EB7B900CA9DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA23DFA81D8EB7E300CA9DB2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CA23DFAB1D8ECB8B00CA9DB2 /* bubble.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bubble.jpg; sourceTree = "<group>"; };
+		CA23DFAC1D8ECB8B00CA9DB2 /* Nature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nature.jpg; sourceTree = "<group>"; };
+		CA23DFAF1D8ECF8A00CA9DB2 /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
+		CA23DFB31D8ED1DB00CA9DB2 /* signinFb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signinFb.png; sourceTree = "<group>"; };
+		CA23DFB51D8ED5BC00CA9DB2 /* ic_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_lock.png; sourceTree = "<group>"; };
+		CA23DFB61D8ED5BC00CA9DB2 /* ic_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_user.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA23DF8D1D8EB7B900CA9DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4A575B9B768FA4009E2858 /* Pods_PhotoAmazing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DAFDCC4BE2394DD2310DF38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07E6E6492D0089A41916556A /* Pods-PhotoAmazing.debug.xcconfig */,
+				024DFDEAF727D335BF6939BA /* Pods-PhotoAmazing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA23DF871D8EB7B900CA9DB2 = {
+			isa = PBXGroup;
+			children = (
+				CA23DF921D8EB7B900CA9DB2 /* PhotoAmazing */,
+				CA23DF911D8EB7B900CA9DB2 /* Products */,
+				7DAFDCC4BE2394DD2310DF38 /* Pods */,
+				E73BD937C7CF13AD4E215F75 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA23DF911D8EB7B900CA9DB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA23DF901D8EB7B900CA9DB2 /* PhotoAmazing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA23DF921D8EB7B900CA9DB2 /* PhotoAmazing */ = {
+			isa = PBXGroup;
+			children = (
+				CA23DFAA1D8ECB8B00CA9DB2 /* Resource */,
+				CA23DFA71D8EB7D600CA9DB2 /* View */,
+				CA23DFA61D8EB7D100CA9DB2 /* Model */,
+				CA23DFA51D8EB7CB00CA9DB2 /* Controller */,
+				CA23DF931D8EB7B900CA9DB2 /* AppDelegate.swift */,
+				CA23DF971D8EB7B900CA9DB2 /* Main.storyboard */,
+				CA23DF9A1D8EB7B900CA9DB2 /* Assets.xcassets */,
+				CA23DF9C1D8EB7B900CA9DB2 /* LaunchScreen.storyboard */,
+				CA23DF9F1D8EB7B900CA9DB2 /* Info.plist */,
+			);
+			path = PhotoAmazing;
+			sourceTree = "<group>";
+		};
+		CA23DFA51D8EB7CB00CA9DB2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA23DFA81D8EB7E300CA9DB2 /* MainViewController.swift */,
+				CA0762F61D902C1200033409 /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CA23DFA61D8EB7D100CA9DB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CA23DFA71D8EB7D600CA9DB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CA23DFAA1D8ECB8B00CA9DB2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CA23DFB51D8ED5BC00CA9DB2 /* ic_lock.png */,
+				CA23DFB61D8ED5BC00CA9DB2 /* ic_user.png */,
+				CA23DFB31D8ED1DB00CA9DB2 /* signinFb.png */,
+				CA23DFAF1D8ECF8A00CA9DB2 /* signin.png */,
+				CA23DFAB1D8ECB8B00CA9DB2 /* bubble.jpg */,
+				CA23DFAC1D8ECB8B00CA9DB2 /* Nature.jpg */,
+			);
+			path = Resource;
+			sourceTree = SOURCE_ROOT;
+		};
+		E73BD937C7CF13AD4E215F75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99E9527CE897F28F8E88E02A /* Pods_PhotoAmazing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA23DF8F1D8EB7B900CA9DB2 /* PhotoAmazing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA23DFA21D8EB7B900CA9DB2 /* Build configuration list for PBXNativeTarget "PhotoAmazing" */;
+			buildPhases = (
+				CED38E8A181608D6FA65CABE /* [CP] Check Pods Manifest.lock */,
+				CA23DF8C1D8EB7B900CA9DB2 /* Sources */,
+				CA23DF8D1D8EB7B900CA9DB2 /* Frameworks */,
+				CA23DF8E1D8EB7B900CA9DB2 /* Resources */,
+				C1C2EBBF387E66931AF8366C /* [CP] Embed Pods Frameworks */,
+				80330ADA708CE1C7F676BCA6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoAmazing;
+			productName = PhotoAmazing;
+			productReference = CA23DF901D8EB7B900CA9DB2 /* PhotoAmazing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA23DF881D8EB7B900CA9DB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Nguyen Manh Tuan";
+				TargetAttributes = {
+					CA23DF8F1D8EB7B900CA9DB2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CA23DF8B1D8EB7B900CA9DB2 /* Build configuration list for PBXProject "PhotoAmazing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA23DF871D8EB7B900CA9DB2;
+			productRefGroup = CA23DF911D8EB7B900CA9DB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA23DF8F1D8EB7B900CA9DB2 /* PhotoAmazing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA23DF8E1D8EB7B900CA9DB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA23DFB41D8ED1DB00CA9DB2 /* signinFb.png in Resources */,
+				CA23DF9E1D8EB7B900CA9DB2 /* LaunchScreen.storyboard in Resources */,
+				CA23DFB71D8ED5BC00CA9DB2 /* ic_lock.png in Resources */,
+				CA23DFB81D8ED5BC00CA9DB2 /* ic_user.png in Resources */,
+				CA23DFB11D8ECF8A00CA9DB2 /* signin.png in Resources */,
+				CA23DFAD1D8ECB8B00CA9DB2 /* bubble.jpg in Resources */,
+				CA23DF9B1D8EB7B900CA9DB2 /* Assets.xcassets in Resources */,
+				CA23DF991D8EB7B900CA9DB2 /* Main.storyboard in Resources */,
+				CA23DFAE1D8ECB8B00CA9DB2 /* Nature.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80330ADA708CE1C7F676BCA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1C2EBBF387E66931AF8366C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CED38E8A181608D6FA65CABE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA23DF8C1D8EB7B900CA9DB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0762F71D902C1200033409 /* LoginViewController.swift in Sources */,
+				CA23DF941D8EB7B900CA9DB2 /* AppDelegate.swift in Sources */,
+				CA23DFA91D8EB7E300CA9DB2 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA23DF971D8EB7B900CA9DB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA23DF981D8EB7B900CA9DB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA23DF9C1D8EB7B900CA9DB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA23DF9D1D8EB7B900CA9DB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA23DFA01D8EB7B900CA9DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA23DFA11D8EB7B900CA9DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA23DFA31D8EB7B900CA9DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07E6E6492D0089A41916556A /* Pods-PhotoAmazing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoAmazing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamup.PhotoAmazing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CA23DFA41D8EB7B900CA9DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 024DFDEAF727D335BF6939BA /* Pods-PhotoAmazing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoAmazing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamup.PhotoAmazing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA23DF8B1D8EB7B900CA9DB2 /* Build configuration list for PBXProject "PhotoAmazing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA23DFA01D8EB7B900CA9DB2 /* Debug */,
+				CA23DFA11D8EB7B900CA9DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA23DFA21D8EB7B900CA9DB2 /* Build configuration list for PBXNativeTarget "PhotoAmazing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA23DFA31D8EB7B900CA9DB2 /* Debug */,
+				CA23DFA41D8EB7B900CA9DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA23DF881D8EB7B900CA9DB2 /* Project object */;
+}
