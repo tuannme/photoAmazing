@@ -2,115 +2,273 @@
 //  MainViewController.swift
 //  PhotoAmazing
 //
-//  Created by Nguyen Manh Tuan on 9/18/16.
+//  Created by TRAMS on 9/21/16.
 //  Copyright © 2016 Nguyen Manh Tuan. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
 class MainViewController: UIViewController {
+
+  var fishImgView:UIImageView?
+  var timer = NSTimer()
+  var count = 0
+  var bubbleImage1:UIImageView?
+  var bubbleImage2:UIImageView?
+  var bubbleImage3:UIImageView?
+  
+  var lastLocation:CGPoint = CGPointMake(-1,-1)
+  
+  
+  @IBAction func backAction(sender: AnyObject) {
     
-    var session: AVCaptureSession?
-    var stillImageOutput: AVCaptureStillImageOutput?
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    self.navigationController?.popViewControllerAnimated(true)
+  }
+  
+  @IBAction func menuAction(sender: AnyObject) {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    fishImgView = UIImageView(image: UIImage(named :"fish.png"))
+    self.fishImgView!.frame = CGRectMake(0, self.view.center.y + 100, 200, 200)
+    self.view.addSubview(fishImgView!)
+    self.goFishGo()
+    
+    timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.creatBubble), userInfo: nil, repeats: true)
+    
+    bubbleImage1 = UIImageView.init(image: UIImage.init(named: "bubble.png"))
+    bubbleImage1?.tag = 1;
+    bubbleImage1?.userInteractionEnabled = true
+    
+    bubbleImage2 = UIImageView.init(image: UIImage.init(named: "bubble.png"))
+    bubbleImage2?.tag = 2;
+    bubbleImage2?.userInteractionEnabled = true
+    
+    bubbleImage3 = UIImageView.init(image: UIImage.init(named: "bubble.png"))
+    bubbleImage3?.tag = 3;
+    bubbleImage3?.userInteractionEnabled = true
+    
+    let pangesture1 = UIPanGestureRecognizer.init(target: self, action: #selector(self.bubblePanAction(_:)))
+    bubbleImage1?.addGestureRecognizer(pangesture1)
+    let tapgesture1 = UITapGestureRecognizer.init(target: self, action: #selector(self.bubbleTapAction(_:)))
+    bubbleImage1?.addGestureRecognizer(tapgesture1)
+    
+    let pangesture2 = UIPanGestureRecognizer.init(target: self, action: #selector(self.bubblePanAction(_:)))
+    bubbleImage2?.addGestureRecognizer(pangesture2)
+    let tapgesture2 = UITapGestureRecognizer.init(target: self, action: #selector(self.bubbleTapAction(_:)))
+    bubbleImage2?.addGestureRecognizer(tapgesture2)
+    
+    let pangesture3 = UIPanGestureRecognizer.init(target: self, action: #selector(self.bubblePanAction(_:)))
+    bubbleImage3?.addGestureRecognizer(pangesture3)
+    let tapgesture3 = UITapGestureRecognizer.init(target: self, action: #selector(self.bubbleTapAction(_:)))
+    bubbleImage3?.addGestureRecognizer(tapgesture3)
+    
+  }
+  
+  
+  func bubblePanAction(gesture:UIPanGestureRecognizer){
+    
+    if(gesture.state == UIGestureRecognizerState.Began){
+      lastLocation = gesture.locationInView(self.view)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        session = AVCaptureSession()
-        session!.sessionPreset = AVCaptureSessionPresetPhoto
-        
-        let backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        var error: NSError?
-        var input: AVCaptureDeviceInput!
-        do {
-            input = try AVCaptureDeviceInput(device: backCamera)
-        } catch let error1 as NSError {
-            error = error1
-            input = nil
-            print(error!.localizedDescription)
-        }
-        
-        if error == nil && session!.canAddInput(input) {
-            session!.addInput(input)
-            // ...
-            // The remainder of the session setup will go here...
-        }
-        
-        stillImageOutput = AVCaptureStillImageOutput()
-        stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-        
-        if session!.canAddOutput(stillImageOutput) {
-            session!.addOutput(stillImageOutput)
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-            videoPreviewLayer!.videoGravity = AVLayerVideoGravityResizeAspectFill
-            videoPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
-            self.view.layer.addSublayer(videoPreviewLayer!)
-            session!.startRunning()
-        }
-        
-        
-        let button = UIButton(type: UIButtonType.System)
-        button.setTitle("Snap", forState: UIControlState.Normal)
-        button.frame = CGRectMake(UIScreen.mainScreen().bounds.size.width/2 - 40, UIScreen.mainScreen().bounds.size.height - 100, 80, 80)
-        button.backgroundColor = UIColor.whiteColor()
-        button.layer.cornerRadius = 40;
-        button.clipsToBounds = true
-        button.alpha = 0.5
-        button.addTarget(self, action: #selector(self.snapPhoto), forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(button)
-        
+    if(gesture.state == UIGestureRecognizerState.Changed){
+      
+      let translation  = gesture.translationInView(self.view!)
+      let bubble = gesture.view
+      let n = bubble?.tag
+      
+      switch n {
+      case let n where n == 1:
+        bubbleImage1?.center = CGPointMake(lastLocation.x + translation.x,lastLocation.y + translation.y)
+      case let n where n == 2:
+        bubbleImage2?.center = CGPointMake(lastLocation.x + translation.x,lastLocation.y + translation.y)
+      case let n where n == 3:
+        bubbleImage3?.center = CGPointMake(lastLocation.x + translation.x,lastLocation.y + translation.y)
+      default:
+        print("")
+      }
     }
     
-    func snapPhoto() {
-        if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
-            stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: { (sampleBuffer, error) -> Void in
-                if sampleBuffer != nil {
-                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-                    let dataProvider = CGDataProviderCreateWithCFData(imageData)
-                    let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
-                    let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
-                    
-                    let imageView = UIImageView(image: image)
-                    imageView.frame = self.view.frame;
-                    self.view.addSubview(imageView)
-                    
-                }
-            })
-        }
+  }
+  
+  func bubbleTapAction(gesture:UITapGestureRecognizer){
+    
+    let bubble = gesture.view
+    let n = bubble?.tag
+    
+    switch n {
+    case let n where n == 1:
+      let sb = UIStoryboard.init(name: "Main", bundle: nil)
+      let galleryVC:GalleryViewController = sb.instantiateViewControllerWithIdentifier("GalleryViewController") as! GalleryViewController
+      self.navigationController!.pushViewController(galleryVC, animated: true)
+    case let n where n == 2:
+      print("")
+    case let n where n == 3:
+      let takePhotoVC:TakePhotoViewController = TakePhotoViewController()
+      takePhotoVC.view.frame = self.view.frame
+      self.navigationController!.pushViewController(takePhotoVC, animated: true)
+    default:
+      print("")
     }
     
+  }
+  
+  func goFishGo(){
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        videoPreviewLayer!.frame = self.view.bounds
+    UIView.animateWithDuration(5, animations: {
+      self.fishImgView!.frame = CGRectMake(self.view.frame.size.width + 200, self.view.center.y + 100, 200, 200);
+      },completion: { (finish) in
+        self.timer.invalidate()
+    })
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
+  }
+  
+  
+  func creatBubble(){
+    
+    let bubbleImageView = UIImageView.init(image: UIImage.init(named: "bubble.png"))
+    
+    var title:String = ""
+    count = count + 1
+    
+    if(count == 1){
+      title = "library"
+    }else if(count == 10){
+      title = "my photos"
+    }else if(count == 20){
+      title = "take photo"
+    }
+    var size = self.randomFrom(5, step: 5)
+    if(!title.isEmpty){
+      size = 100;
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    let label = UILabel.init(frame: CGRectMake(0, 0, 90, 90))
+    label.font = UIFont(name:"Party LET", size: 40)
+    label.textColor = UIColor.yellowColor()
+    label.textAlignment = NSTextAlignment.Center
+    label.text = title
+    bubbleImageView.addSubview(label)
+    
+    bubbleImageView.frame = CGRectMake (self.fishImgView!.layer.presentationLayer()!.frame.origin.x + 5,(self.fishImgView!.layer.presentationLayer()?.frame.origin.y)!+80,size,size)
+    
+    bubbleImageView.alpha = self.randomFrom(0.5, step: 0.05);
+    self.view.addSubview(bubbleImageView)
+    
+    let zigzagPath = UIBezierPath()
+    
+    let oX = bubbleImageView.frame.origin.x
+    let oY = bubbleImageView.frame.origin.y
+    var eX = oX
+    var eY = self.randomFrom(50, step: 30)
+    let t = self.randomFrom(20, step: 10)
+    
+    var cp1 = CGPointMake(oX - t, ((oY + eY) / 2));
+    var cp2 = CGPointMake(oX + t, cp1.y);
+    
+    let r = arc4random() % 2
+    if(r == 1){
+      let temp = cp1
+      cp1 = cp2
+      cp2 = temp
     }
     
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    if(count == 1){
+      eY  = 180
+      eX = 90
+      cp1 = CGPointMake(400,10)
+      cp2 = CGPointMake(50,10)
+      bubbleImageView.tag = 1
+    }else if(count == 10){
+      eY  = 230
+      eX = 280
+      cp1 = CGPointMake(100,300)
+      cp2 = CGPointMake(200,100)
+      bubbleImageView.tag = 2
+    }else if(count == 20){
+      eY  = 370
+      eX = 180
+      cp1 = CGPointMake(170,300)
+      cp2 = CGPointMake(10,200)
+      bubbleImageView.tag = 3
     }
     
+    zigzagPath.moveToPoint(CGPointMake(oX, oY))
+    zigzagPath.addCurveToPoint(CGPointMake(eX, eY), controlPoint1: cp1, controlPoint2: cp2)
     
+    CATransaction.begin()
+    CATransaction.setCompletionBlock({
+      
+      UIView.transitionWithView(bubbleImageView, duration:0.1, options:.TransitionCrossDissolve, animations: {
+        bubbleImageView.transform = CGAffineTransformMakeScale(1.4, 1.4);
+        }, completion: { (finish) in
+          
+          if(!title.isEmpty){
+            
+            let mLabel = UILabel.init(frame: CGRectMake(0, 0, 140, 140))
+            mLabel.font = UIFont(name:"Party LET", size: 50)
+            mLabel.textColor = UIColor.yellowColor()
+            mLabel.textAlignment = NSTextAlignment.Center
+            mLabel.text = title
+            
+            if(bubbleImageView.tag == 1){
+              self.bubbleImage1?.frame = CGRectMake(eX - 70, eY - 70, 140, 140)
+              self.bubbleImage1?.addSubview(mLabel)
+              self.view.addSubview(self.bubbleImage1!)
+            }else if(bubbleImageView.tag == 2){
+              self.bubbleImage2?.frame = CGRectMake(eX - 70, eY - 70, 140, 140)
+              self.view.addSubview(self.bubbleImage2!)
+              self.bubbleImage2?.addSubview(mLabel)
+            }else if(bubbleImageView.tag == 3){
+              self.bubbleImage3?.frame = CGRectMake(eX - 70, eY - 70, 140, 140)
+              self.view.addSubview(self.bubbleImage3!)
+              self.bubbleImage3?.addSubview(mLabel)
+            }
+          }
+          bubbleImageView.removeFromSuperview()
+      })
+      
+    })
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    let pathAnimation = CAKeyframeAnimation(keyPath:"position")
+    pathAnimation.duration = 2;
+    pathAnimation.path = zigzagPath.CGPath;
+    pathAnimation.fillMode = kCAFillModeForwards;
+    pathAnimation.removedOnCompletion = false;
     
+    bubbleImageView.layer.addAnimation(pathAnimation, forKey: "movingAnimation")
+    CATransaction.commit()
+    
+  }
+  
+  
+  func randomFrom(number:CGFloat,step:CGFloat)-> CGFloat{
+    
+    let values:NSMutableArray = NSMutableArray()
+    var newNumber = number;
+    for _ in 0...9{
+      values.addObject(newNumber)
+      newNumber = newNumber + step
+    }
+    let random = Int(arc4random_uniform(UInt32(10)))
+    return values[random] as! CGFloat
+  }
+  
 }
