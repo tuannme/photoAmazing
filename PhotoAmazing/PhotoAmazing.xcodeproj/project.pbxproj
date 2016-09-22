@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161895011D93827B0044BB8C /* ImageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161895001D93827B0044BB8C /* ImageProcessingViewController.swift */; };
+		161895041D9389A90044BB8C /* bt_return.png in Resources */ = {isa = PBXBuildFile; fileRef = 161895031D9389A90044BB8C /* bt_return.png */; };
+		161895061D938E080044BB8C /* bg_Demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 161895051D938E080044BB8C /* bg_Demo.png */; };
+		1618950C1D93900C0044BB8C /* bg_Demo_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 161895071D93900C0044BB8C /* bg_Demo_big.png */; };
+		1618950D1D93900C0044BB8C /* ic_magic.png in Resources */ = {isa = PBXBuildFile; fileRef = 161895081D93900C0044BB8C /* ic_magic.png */; };
+		1618950E1D93900C0044BB8C /* ic_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 161895091D93900C0044BB8C /* ic_crop.png */; };
+		1618950F1D93900C0044BB8C /* ic_rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1618950A1D93900C0044BB8C /* ic_rotate.png */; };
+		161895101D93900C0044BB8C /* ic_smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 1618950B1D93900C0044BB8C /* ic_smile.png */; };
+		161895121D93C07A0044BB8C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161895111D93C07A0044BB8C /* CoreMedia.framework */; };
+		161895141D93C0810044BB8C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161895131D93C0810044BB8C /* CoreVideo.framework */; };
+		161895161D93C0890044BB8C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161895151D93C0890044BB8C /* OpenGLES.framework */; };
+		161895181D93C08E0044BB8C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161895171D93C08E0044BB8C /* AVFoundation.framework */; };
+		1618951A1D93C09B0044BB8C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161895191D93C09B0044BB8C /* QuartzCore.framework */; };
 		1640070E1D90DAC1000BBE24 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640070D1D90DAC1000BBE24 /* GalleryViewController.swift */; };
 		164007101D90DFD6000BBE24 /* bt_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1640070F1D90DFD6000BBE24 /* bt_back.png */; };
 		164007121D90DFEF000BBE24 /* bt_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 164007111D90DFEF000BBE24 /* bt_menu.png */; };
@@ -37,6 +50,19 @@
 /* Begin PBXFileReference section */
 		024DFDEAF727D335BF6939BA /* Pods-PhotoAmazing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAmazing.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing.release.xcconfig"; sourceTree = "<group>"; };
 		07E6E6492D0089A41916556A /* Pods-PhotoAmazing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAmazing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing.debug.xcconfig"; sourceTree = "<group>"; };
+		161895001D93827B0044BB8C /* ImageProcessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessingViewController.swift; sourceTree = "<group>"; };
+		161895031D9389A90044BB8C /* bt_return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_return.png; sourceTree = "<group>"; };
+		161895051D938E080044BB8C /* bg_Demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_Demo.png; sourceTree = "<group>"; };
+		161895071D93900C0044BB8C /* bg_Demo_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_Demo_big.png; sourceTree = "<group>"; };
+		161895081D93900C0044BB8C /* ic_magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_magic.png; sourceTree = "<group>"; };
+		161895091D93900C0044BB8C /* ic_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_crop.png; sourceTree = "<group>"; };
+		1618950A1D93900C0044BB8C /* ic_rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_rotate.png; sourceTree = "<group>"; };
+		1618950B1D93900C0044BB8C /* ic_smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_smile.png; sourceTree = "<group>"; };
+		161895111D93C07A0044BB8C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		161895131D93C0810044BB8C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		161895151D93C0890044BB8C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		161895171D93C08E0044BB8C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		161895191D93C09B0044BB8C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1640070D1D90DAC1000BBE24 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		1640070F1D90DFD6000BBE24 /* bt_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_back.png; sourceTree = "<group>"; };
 		164007111D90DFEF000BBE24 /* bt_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_menu.png; sourceTree = "<group>"; };
@@ -71,6 +97,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1618951A1D93C09B0044BB8C /* QuartzCore.framework in Frameworks */,
+				161895181D93C08E0044BB8C /* AVFoundation.framework in Frameworks */,
+				161895161D93C0890044BB8C /* OpenGLES.framework in Frameworks */,
+				161895141D93C0810044BB8C /* CoreVideo.framework in Frameworks */,
+				161895121D93C07A0044BB8C /* CoreMedia.framework in Frameworks */,
 				164007181D910AD3000BBE24 /* Photos.framework in Frameworks */,
 				CB4A575B9B768FA4009E2858 /* Pods_PhotoAmazing.framework in Frameworks */,
 			);
@@ -79,6 +110,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161895021D9389A90044BB8C /* Imageprocess */ = {
+			isa = PBXGroup;
+			children = (
+				161895071D93900C0044BB8C /* bg_Demo_big.png */,
+				161895081D93900C0044BB8C /* ic_magic.png */,
+				161895091D93900C0044BB8C /* ic_crop.png */,
+				1618950A1D93900C0044BB8C /* ic_rotate.png */,
+				1618950B1D93900C0044BB8C /* ic_smile.png */,
+				161895051D938E080044BB8C /* bg_Demo.png */,
+				161895031D9389A90044BB8C /* bt_return.png */,
+			);
+			path = Imageprocess;
+			sourceTree = "<group>";
+		};
 		7DAFDCC4BE2394DD2310DF38 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +175,7 @@
 				164007131D910765000BBE24 /* PhotoAmazingViewController.swift */,
 				164FFB011D92676100E856E5 /* TakePhotoViewController.swift */,
 				164FFB031D926A3100E856E5 /* MainViewController.swift */,
+				161895001D93827B0044BB8C /* ImageProcessingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -151,6 +197,7 @@
 		CA23DFAA1D8ECB8B00CA9DB2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				161895021D9389A90044BB8C /* Imageprocess */,
 				164FFB091D928D2500E856E5 /* magic.png */,
 				164FFB051D92736C00E856E5 /* bt_accept.png */,
 				164FFB061D92736C00E856E5 /* bt_forward.png */,
@@ -172,6 +219,11 @@
 		E73BD937C7CF13AD4E215F75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				161895191D93C09B0044BB8C /* QuartzCore.framework */,
+				161895171D93C08E0044BB8C /* AVFoundation.framework */,
+				161895151D93C0890044BB8C /* OpenGLES.framework */,
+				161895131D93C0810044BB8C /* CoreVideo.framework */,
+				161895111D93C07A0044BB8C /* CoreMedia.framework */,
 				164007171D910AD3000BBE24 /* Photos.framework */,
 				99E9527CE897F28F8E88E02A /* Pods_PhotoAmazing.framework */,
 			);
@@ -191,6 +243,7 @@
 				CA23DF8E1D8EB7B900CA9DB2 /* Resources */,
 				C1C2EBBF387E66931AF8366C /* [CP] Embed Pods Frameworks */,
 				80330ADA708CE1C7F676BCA6 /* [CP] Copy Pods Resources */,
+				C71B27ED43A6FE205E537C0C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,11 +302,18 @@
 				CA23DFB81D8ED5BC00CA9DB2 /* ic_user.png in Resources */,
 				164FFB0A1D928D2500E856E5 /* magic.png in Resources */,
 				164FFB071D92736C00E856E5 /* bt_accept.png in Resources */,
+				161895061D938E080044BB8C /* bg_Demo.png in Resources */,
 				164007161D9107C8000BBE24 /* fish.png in Resources */,
 				164007101D90DFD6000BBE24 /* bt_back.png in Resources */,
+				1618950C1D93900C0044BB8C /* bg_Demo_big.png in Resources */,
+				161895041D9389A90044BB8C /* bt_return.png in Resources */,
+				1618950F1D93900C0044BB8C /* ic_rotate.png in Resources */,
+				1618950D1D93900C0044BB8C /* ic_magic.png in Resources */,
+				1618950E1D93900C0044BB8C /* ic_crop.png in Resources */,
 				CA23DFB11D8ECF8A00CA9DB2 /* signin.png in Resources */,
 				164FFB081D92736C00E856E5 /* bt_forward.png in Resources */,
 				CA23DFAD1D8ECB8B00CA9DB2 /* bubble.jpg in Resources */,
+				161895101D93900C0044BB8C /* ic_smile.png in Resources */,
 				CA23DF9B1D8EB7B900CA9DB2 /* Assets.xcassets in Resources */,
 				CA23DF991D8EB7B900CA9DB2 /* Main.storyboard in Resources */,
 				CA23DFAE1D8ECB8B00CA9DB2 /* Nature.jpg in Resources */,
@@ -293,6 +353,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C71B27ED43A6FE205E537C0C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoAmazing/Pods-PhotoAmazing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CED38E8A181608D6FA65CABE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +396,7 @@
 				164FFB041D926A3100E856E5 /* MainViewController.swift in Sources */,
 				CA23DF941D8EB7B900CA9DB2 /* AppDelegate.swift in Sources */,
 				164FFB021D92676100E856E5 /* TakePhotoViewController.swift in Sources */,
+				161895011D93827B0044BB8C /* ImageProcessingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

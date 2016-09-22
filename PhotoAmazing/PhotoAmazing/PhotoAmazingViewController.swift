@@ -14,6 +14,8 @@ class PhotoAmazingViewController: UIViewController,UICollectionViewDelegate,UICo
   @IBOutlet weak var sliderCollectionView: UICollectionView!
   @IBOutlet weak var photoImgView: UIImageView!
   
+  
+  
   private var photo:UIImage?
   
   func setPhoto(photo:UIImage){
@@ -57,21 +59,6 @@ class PhotoAmazingViewController: UIViewController,UICollectionViewDelegate,UICo
     minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
     return 1.0
   }
-  
-   /*
-  func collectionView(collectionView: UICollectionView, layout
-    collectionViewLayout: UICollectionViewLayout,
-    minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-    return 0.0
-  }
- 
-  
-  func collectionView(collectionView: UICollectionView,
-                                 layout collectionViewLayout: UICollectionViewLayout,
-                                        insetForSectionAt section: Int) -> UIEdgeInsets{
-    return UIEdgeInsetsMake(0, 0, 0, 0);
-  }
-  */
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     

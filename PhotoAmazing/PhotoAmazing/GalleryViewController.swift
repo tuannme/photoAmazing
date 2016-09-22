@@ -35,7 +35,6 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
   }
   
-  
   func fetchPhotos() {
     requestOptions.resizeMode = PHImageRequestOptionsResizeMode.Exact
     requestOptions.version = .Current
@@ -122,7 +121,6 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
   }
   
-  
   func showImageDetailIndex(index:Int){
     
     let asset = self.assets[index]
@@ -131,17 +129,13 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate,UICollect
     })
   }
   
-  
-  
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
-    let photoAmazingVC:PhotoAmazingViewController = segue.destinationViewController as! PhotoAmazingViewController
+    let photoAmazingVC:ImageProcessingViewController = segue.destinationViewController as! ImageProcessingViewController
     photoAmazingVC.setPhoto(self.imageDetailView.image!)
     
   }
-  
-  
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
