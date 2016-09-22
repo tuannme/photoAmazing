@@ -19,9 +19,12 @@ class ImageProcessingViewController: UIViewController,UICollectionViewDelegate,U
   @IBOutlet weak var smileBtn: UIButton!
   @IBOutlet weak var retateBtn: UIButton!
   
-  
+  let slider:UISlider = UISlider(frame: CGRectMake(30,200,200,5))
   let scene:[String] = ["없음","그겨울","따스한","빛나는","달빛","샴페인"]
-  
+  //let filter:GPUImageHighlightShadowFilter = GPUImageHighlightShadowFilter()
+    let filter:GPUImageBrightnessFilter = GPUImageBrightnessFilter()
+  var source:GPUImagePicture? = nil
+    
   private var photo:UIImage?
   
   func setPhoto(photo:UIImage){
@@ -31,14 +34,49 @@ class ImageProcessingViewController: UIViewController,UICollectionViewDelegate,U
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    source = GPUImagePicture(image: photo)
+
+    filter.brightness = 0.5
+    source?.addTarget(filter)
+    
+    filter.useNextFrameForImageCapture()
+    source?.processImage()
+    self.photoImgView.image = filter.imageFromCurrentFramebuffer()
+
+    
     if(DeviceType.IS_IPHONE_6){
       magicBtn.contentEdgeInsets = UIEdgeInsets(top: 12, left: 35, bottom: 12, right: 35)
       cropBtn.contentEdgeInsets = UIEdgeInsets(top: 12, left: 35, bottom: 12, right: 35)
       retateBtn.contentEdgeInsets = UIEdgeInsets(top: 12, left: 35, bottom: 12, right: 35)
       smileBtn.contentEdgeInsets = UIEdgeInsets(top: 12, left: 35, bottom: 12, right: 35)
     }
+    
+    slider.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
+    slider.addTarget(self, action: #selector(self.changeValue(_:)), forControlEvents:.ValueChanged)
+    slider.minimumValue = -1.0
+    slider.maximumValue = 1.0
+    slider.userInteractionEnabled = true
+    slider.value = 0
+
+  
+    
+    self.view.addSubview(slider)
+    
   }
   
+    func changeValue(slider:UISlider){
+        
+        let value:CGFloat  = CGFloat(slider.value)
+        self.filter.brightness = value
+        
+        print("value \(value)")
+        
+        filter.useNextFrameForImageCapture()
+        source?.processImage()
+        self.photoImgView.image = filter.imageFromCurrentFramebuffer()
+        
+    }
+    
 
   func fileterImage(index: Int){
     
@@ -71,19 +109,12 @@ class ImageProcessingViewController: UIViewController,UICollectionViewDelegate,U
       self.photoImgView.image = newPhoto
       break
     case 4:
-      let filter:GPUImageHazeFilter = GPUImageHazeFilter()
-      filter.distance = 3
-      filter.slope = 3
-      let newPhoto = filter.imageByFilteringImage(photo);
-      self.photoImgView.image = newPhoto
-      break
-    case 5:
       let filter:GPUImageOpacityFilter = GPUImageOpacityFilter()
       filter.opacity = 0.5
       let newPhoto = filter.imageByFilteringImage(photo);
       self.photoImgView.image = newPhoto
       break
-    case 6:
+    case 5:
       let filter:GPUImageLuminanceThresholdFilter = GPUImageLuminanceThresholdFilter()
       filter.threshold = 0.1
       filter.useNextFrameForImageCapture()
@@ -94,9 +125,6 @@ class ImageProcessingViewController: UIViewController,UICollectionViewDelegate,U
       break
     }
   }
-  
-  /****comment***/
-  
   
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
