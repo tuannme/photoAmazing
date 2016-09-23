@@ -58,7 +58,7 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate,UICollect
       }
       dispatch_async(dispatch_get_main_queue()) {
         self?.galleryCollectionView.reloadData()
-        self?.showImageDetailIndex(0)
+        //self?.showImageDetailIndex(0)
       }
     }
   }

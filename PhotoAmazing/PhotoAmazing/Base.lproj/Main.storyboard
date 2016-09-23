@@ -446,6 +446,60 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_Demo_big.png" translatesAutoresizingMaskIntoConstraints="NO" id="5mP-9i-vm6">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
                                     </imageView>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I4u-Yu-Z6Z">
+                                        <rect key="frame" x="110" y="347" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueRedChrome:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="sHF-9L-QBZ"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eL3-Nz-gZ8">
+                                        <rect key="frame" x="110" y="315" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueGreenChrome:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="bKX-Pa-OFs"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ydS-Zt-CF7">
+                                        <rect key="frame" x="110" y="282" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueBlueChrome:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="jQE-Dt-lKt"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-ID-kcY">
+                                        <rect key="frame" x="110" y="244" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueShadow:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="sw9-GW-GeP"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Qi-Jv-L0E">
+                                        <rect key="frame" x="110" y="211" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueLight:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="Mt4-FZ-rLR"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8vJ-OZ-gdC">
+                                        <rect key="frame" x="110" y="178" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueBlue:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="ygU-pS-xfF"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rWa-Id-Rvc">
+                                        <rect key="frame" x="110" y="140" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueGreen:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="MHW-Jv-aUM"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qnc-ZZ-sK1">
+                                        <rect key="frame" x="110" y="102" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueRed:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="GAm-ZT-Yck"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uLe-Sw-Bfv">
+                                        <rect key="frame" x="110" y="64" width="204" height="31"/>
+                                        <connections>
+                                            <action selector="changeValueBright:" destination="qAQ-Wf-vMC" eventType="valueChanged" id="Ml5-SM-smE"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -633,7 +687,16 @@
                         <outlet property="magicBtn" destination="5rL-UN-hHM" id="Xte-BS-XdV"/>
                         <outlet property="photoImgView" destination="5mP-9i-vm6" id="1Qg-uK-dAG"/>
                         <outlet property="retateBtn" destination="P5X-eK-cay" id="awY-R0-C2w"/>
+                        <outlet property="sliderBlue" destination="8vJ-OZ-gdC" id="T6u-dR-NTF"/>
+                        <outlet property="sliderBlueChrome" destination="ydS-Zt-CF7" id="ybo-3Q-u4s"/>
+                        <outlet property="sliderBright" destination="uLe-Sw-Bfv" id="rVP-NG-Ggg"/>
                         <outlet property="sliderCollectionView" destination="W6K-VH-O8m" id="8Yt-Y7-TrG"/>
+                        <outlet property="sliderGreen" destination="rWa-Id-Rvc" id="PHT-Iz-O8g"/>
+                        <outlet property="sliderGreenChrome" destination="eL3-Nz-gZ8" id="0J6-KW-bYf"/>
+                        <outlet property="sliderLight" destination="4Qi-Jv-L0E" id="XSv-pf-iuo"/>
+                        <outlet property="sliderRed" destination="qnc-ZZ-sK1" id="57A-Ic-rAe"/>
+                        <outlet property="sliderRedChrome" destination="I4u-Yu-Z6Z" id="Foh-8m-g0l"/>
+                        <outlet property="sliderShadow" destination="aO5-ID-kcY" id="oxb-BI-aOR"/>
                         <outlet property="smileBtn" destination="J7E-Ww-Ki4" id="w4L-lc-koU"/>
                     </connections>
                 </viewController>
