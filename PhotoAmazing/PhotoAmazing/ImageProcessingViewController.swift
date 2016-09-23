@@ -95,9 +95,6 @@ class ImageProcessingViewController: UIViewController,UICollectionViewDelegate,U
     }
   }
   
-  /****comment***/
-  
-  
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = self.sliderCollectionView.dequeueReusableCellWithReuseIdentifier("item", forIndexPath: indexPath)
